@@ -11,6 +11,19 @@ body {
                 url('tent.png') center/cover;
     background-blend-mode: screen; /* Blend the gradients with the image */
     opacity: 0.75; /* 75% transparency */
+    animation: gradientAnimation 10s infinite; /* 10 seconds for each iteration */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
