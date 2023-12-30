@@ -1,9 +1,8 @@
-
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #bde0fe; /* Sky blue background */
 }
 
 .container {
@@ -16,7 +15,7 @@ body {
 }
 
 h1, h2 {
-    color: #333; /* Dark gray text */
+    color: #ff9900; /* Duck beak orange text */
 }
 
 section {
@@ -41,4 +40,16 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Add more specific styling for Discord section if needed */
+/* Duck-themed styles */
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4f5459; /* Duck feather gray */
+}
+
+.duck-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
