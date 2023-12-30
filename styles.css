@@ -1,12 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Because it's a funhouse theme! */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #ffecdb; /* Light peach background */
 }
 
 .container {
@@ -20,28 +20,33 @@ body {
 label {
     display: block;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 input {
     width: 100%;
     padding: 8px;
     margin-bottom: 20px;
+    font-size: 16px;
 }
 
-button {
+.fun-button {
     padding: 10px;
     cursor: pointer;
-    background-color: #4caf50;
-    color: #fff;
     border: none;
     border-radius: 4px;
     margin-right: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
 }
 
-button:hover {
-    background-color: #45a049;
+.fun-button:hover {
+    background: linear-gradient(45deg, #ff6347, #ffa07a, #ffd700, #87ceeb);
 }
 
 #result {
     margin-top: 20px;
+    font-size: 18px;
 }
+
