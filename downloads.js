@@ -5,3 +5,16 @@ function playQuackSound() {
     const audio = new Audio(randomQuack);
     audio.play();
 }
+
+function playQuackOnLinkClick() {
+    const links = document.querySelectorAll('a');
+    
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            playQuackSound();
+        });
+    });
+}
+
+// Call the function to attach the event listeners to all links when the page loads
+document.addEventListener('DOMContentLoaded', playQuackOnLinkClick);
