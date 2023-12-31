@@ -1,28 +1,28 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f0f0f0;
     color: #333;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #2c3e50;
+    color: #0077cc;
 }
 
 label {
     display: block;
     margin-bottom: 8px;
-    color: #3498db;
+    color: #0077cc;
 }
 
 textarea {
@@ -35,7 +35,7 @@ textarea {
 }
 
 button {
-    background-color: #2ecc71;
+    background-color: #4CAF50;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -44,7 +44,7 @@ button {
 }
 
 button:hover {
-    background-color: #27ae60;
+    background-color: #45a049;
 }
 
 #morseOutputText {
@@ -52,7 +52,7 @@ button:hover {
     padding: 10px;
     margin-top: 10px;
     box-sizing: border-box;
-    border: 1px solid #3498db;
+    border: 1px solid #0077cc;
     border-radius: 5px;
-    color: #3498db;
+    color: #0077cc;
 }
