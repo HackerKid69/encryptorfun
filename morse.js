@@ -35,6 +35,31 @@ function morseToText(morseCode) {
     return decodedText;
 }
 
+// Function to encode text to Binary
+function textToBinary(text) {
+    return text.split('').map(char => char.charCodeAt(0).toString(2).padStart(8, '0')).join(' ');
+}
+
+// Function to decode Binary to text
+function binaryToText(binaryCode) {
+    const binaryArray = binaryCode.split(' ');
+    return binaryArray.map(binaryChar => String.fromCharCode(parseInt(binaryChar, 2))).join('');
+}
+
+// Function to encode text to Binary and update output textarea
+function encodeBinary() {
+    const inputText = document.getElementById('binaryInputText').value;
+    const encodedText = textToBinary(inputText);
+    document.getElementById('binaryOutputText').value = 'Binary Code: ' + encodedText;
+}
+
+// Function to decode Binary to text and update output textarea
+function decodeBinary() {
+    const inputText = document.getElementById('binaryInputText').value;
+    const decodedText = binaryToText(inputText);
+    document.getElementById('binaryOutputText').value = 'Decoded Text: ' + decodedText;
+}
+
 // Function to encode text to Morse code and update output textarea
 function encodeMorse() {
     const inputText = document.getElementById('morseInputText').value;
