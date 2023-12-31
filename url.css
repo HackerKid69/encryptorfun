@@ -35,18 +35,32 @@ input {
 }
 
 button {
-    background-color: #2ecc71;
+    background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71, #f39c12);
     color: #fff;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    animation: gradientMove 3s infinite;
 }
 
 button:hover {
-    background-color: #27ae60;
+    background-position: 200% 0;
 }
 
 #error-message {
     color: #e74c3c;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0% 0;
+    }
 }
