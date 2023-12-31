@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="morse.css">
-    <title>Morse Code Encoder/Decoder</title>
+    <title>Encoder/Decoder</title>
     <script src="morse.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Morse Code Encoder/Decoder 📡</h1>
+        <h1>Encoder/Decoder 📡</h1>
 
+        <!-- Morse Code Section -->
+        <h2>Morse Code</h2>
         <label for="morseInputText">Enter Text:</label>
         <textarea id="morseInputText" rows="4" cols="50"></textarea>
 
@@ -19,6 +21,17 @@
 
         <label for="morseOutputText">Result:</label>
         <textarea id="morseOutputText" rows="4" cols="50" readonly></textarea>
+
+        <!-- Binary Section -->
+        <h2>Binary</h2>
+        <label for="binaryInputText">Enter Text:</label>
+        <textarea id="binaryInputText" rows="4" cols="50"></textarea>
+
+        <button onclick="encodeBinary()">Encode Binary 🔒</button>
+        <button onclick="decodeBinary()">Decode Binary 🔓</button>
+
+        <label for="binaryOutputText">Result:</label>
+        <textarea id="binaryOutputText" rows="4" cols="50" readonly></textarea>
     </div>
 </body>
 </html>
