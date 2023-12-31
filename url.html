@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="url.css">
+    <title>URL Shortener 🔗</title>
+    <script src="url.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener 🔗</h1>
 
+        <label for="originalUrl">Enter URL:</label>
+        <input type="url" id="originalUrl" placeholder="https://example.com" required>
+
+        <button onclick="shortenUrl()">Shorten URL 🚀</button>
+
+        <label for="shortenedUrl">Shortened URL:</label>
+        <input type="text" id="shortenedUrl" readonly>
+
+        <p id="error-message" class="error"></p>
+    </div>
+</body>
+</html>
