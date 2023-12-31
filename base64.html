@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="base64.css">
     <title>Base64 Encoder/Decoder</title>
+    <script src="base64.js"></script>
 </head>
 <body>
     <div class="container">
@@ -16,9 +17,9 @@
         <button onclick="encode()">Encode 🔒</button>
         <button onclick="decode()">Decode 🔓</button>
 
-        <p id="result"></p>
+        <!-- New textarea to display the result -->
+        <label for="outputText">Result:</label>
+        <textarea id="outputText" rows="4" cols="50" readonly></textarea>
     </div>
-
-    <script src="base64.js"></script>
 </body>
 </html>
