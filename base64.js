@@ -1,13 +1,13 @@
 // Function to encode the input text to Base64
 function encodeBase64() {
-    const inputText = document.getElementById('inputText').value;
+    const inputText = document.getElementById('base64InputText').value;
     const encodedText = btoa(inputText);
-    document.getElementById('outputText').value = 'Base64 Encoded Text: ' + encodedText;
+    document.getElementById('base64OutputText').value = 'Base64 Encoded Text: ' + encodedText;
 }
 
 // Function to decode the Base64 text
 function decodeBase64() {
-    const inputText = document.getElementById('inputText').value;
+    const inputText = document.getElementById('base64InputText').value;
     let decodedText;
 
     try {
@@ -16,19 +16,19 @@ function decodeBase64() {
         decodedText = 'Invalid Base64 input';
     }
 
-    document.getElementById('outputText').value = 'Base64 Decoded Text: ' + decodedText;
+    document.getElementById('base64OutputText').value = 'Base64 Decoded Text: ' + decodedText;
 }
 
 // Function to encode the input text to Base32
 function encodeBase32() {
-    const inputText = document.getElementById('inputText').value;
+    const inputText = document.getElementById('base32InputText').value;
     const encodedText = customBase32Encode(inputText);
-    document.getElementById('outputText').value = 'Base32 Encoded Text: ' + encodedText;
+    document.getElementById('base32OutputText').value = 'Base32 Encoded Text: ' + encodedText;
 }
 
 // Function to decode the Base32 text
 function decodeBase32() {
-    const inputText = document.getElementById('inputText').value;
+    const inputText = document.getElementById('base32InputText').value;
     let decodedText;
 
     try {
@@ -37,7 +37,7 @@ function decodeBase32() {
         decodedText = 'Invalid Base32 input';
     }
 
-    document.getElementById('outputText').value = 'Base32 Decoded Text: ' + decodedText;
+    document.getElementById('base32OutputText').value = 'Base32 Decoded Text: ' + decodedText;
 }
 
 // Custom function to encode text to Base32
@@ -91,3 +91,4 @@ function customBase32Decode(input) {
 
     return decodedText;
 }
+
