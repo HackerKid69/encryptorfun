@@ -1,6 +1,5 @@
 # Encryptofun: A Fun and Secure Encryption Playground
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_NETLIFY_SITE_ID/deploy-status)](https://app.netlify.com/sites/YOUR_NETLIFY_SITE_ID)
 
 Welcome to Encryptofun, a vibrant and interactive website that combines playful design with practical encryption tools. This project, affectionately named "Encryptofun," is hosted on Netlify.
 
