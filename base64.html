@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="base64.css">
-    <title>Base64 Encoder/Decoder</title>
+    <title>Base64 & Base32 Encoder/Decoder</title>
     <script src="base64.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Base64 Encoder/Decoder 🌐</h1>
+        <h1>Base64 & Base32 Encoder/Decoder 🌐</h1>
 
-        <label for="inputText">Enter Text:</label>
-        <textarea id="inputText" rows="4" cols="50"></textarea>
+        <!-- Base64 Encoding/Decoding Section -->
+        <h2>Base64 Encoding/Decoding</h2>
+        <label for="base64InputText">Enter Text:</label>
+        <textarea id="base64InputText" rows="4" cols="50"></textarea>
 
-        <button onclick="encode()">Encode 🔒</button>
-        <button onclick="decode()">Decode 🔓</button>
+        <button onclick="encodeBase64()">Encode Base64 🔒</button>
+        <button onclick="decodeBase64()">Decode Base64 🔓</button>
 
-        <!-- New textarea to display the result -->
-        <label for="outputText">Result:</label>
-        <textarea id="outputText" rows="4" cols="50" readonly></textarea>
+        <label for="base64OutputText">Result:</label>
+        <textarea id="base64OutputText" rows="4" cols="50" readonly></textarea>
+
+        <!-- Base32 Encoding/Decoding Section -->
+        <h2>Base32 Encoding/Decoding</h2>
+        <label for="base32InputText">Enter Text:</label>
+        <textarea id="base32InputText" rows="4" cols="50"></textarea>
+
+        <button onclick="encodeBase32()">Encode Base32 🔒</button>
+        <button onclick="decodeBase32()">Decode Base32 🔓</button>
+
+        <label for="base32OutputText">Result:</label>
+        <textarea id="base32OutputText" rows="4" cols="50" readonly></textarea>
     </div>
 </body>
 </html>
