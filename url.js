@@ -1,6 +1,6 @@
-function shortenUrl() {
+async function shortenUrl() {
     const originalUrl = document.getElementById('originalUrl').value;
-    const shortenedUrl = generateShortUrl(originalUrl);
+    const shortenedUrl = await generateShortUrl(originalUrl);
 
     if (shortenedUrl) {
         document.getElementById('shortenedUrl').value = shortenedUrl;
@@ -11,31 +11,35 @@ function shortenUrl() {
     }
 }
 
-function generateShortUrl(originalUrl) {
-    // Simplified URL shortening logic (you may replace this with your own logic)
+async function generateShortUrl(originalUrl) {
     if (isValidUrl(originalUrl)) {
-        // Here, you can implement your own URL shortening algorithm or use a service/API
-        // For simplicity, let's use a simple hash for demonstration purposes
-        const hashCode = hashString(originalUrl);
-        return 'https://short.url/' + hashCode;
+        try {
+            const response = await fetch('YOUR_SHORTENING_API_ENDPOINT', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    originalUrl: originalUrl,
+                }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                return data.shortenedUrl;
+            } else {
+                throw new Error('Failed to shorten URL');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            return null;
+        }
     }
 
     return null;
 }
 
 function isValidUrl(url) {
-    // Simple URL validation (you may replace this with a more robust solution)
     const urlPattern = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
     return urlPattern.test(url);
-}
-
-function hashString(str) {
-    // Simple hash function (you may replace this with a more secure hash function)
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-        const char = str.charCodeAt(i);
-        hash = (hash << 5) - hash + char;
-        hash &= hash; // Convert to 32bit integer
-    }
-    return Math.abs(hash).toString(36);
 }
