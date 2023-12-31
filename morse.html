@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="morse.css">
+    <title>Morse Code Encoder/Decoder</title>
+    <script src="morse.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Morse Code Encoder/Decoder 📡</h1>
 
+        <label for="morseInputText">Enter Text:</label>
+        <textarea id="morseInputText" rows="4" cols="50"></textarea>
+
+        <button onclick="encodeMorse()">Encode Morse 🔒</button>
+        <button onclick="decodeMorse()">Decode Morse 🔓</button>
+
+        <label for="morseOutputText">Result:</label>
+        <textarea id="morseOutputText" rows="4" cols="50" readonly></textarea>
+    </div>
+</body>
+</html>
